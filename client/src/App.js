@@ -64,6 +64,13 @@ function App() {
     setMapSelectedWonder(wonder);
   };
 
+  const clearOnMapWonderSelected = () => {
+    console.log("hello world");
+    setMapSelectedWonder(null)
+    setSelectedWonder(null)
+    console.log("done");
+  }
+
   return (
 
     <div className='background-img'>
@@ -73,7 +80,7 @@ function App() {
             return <Home addFormUser={addFormUser} createUser={createUser} currentUser={currentUser} formUser={formUser} />
           }} />
           <Route exact path="/new" render={() => {
-            return <New wonders={wonders} selectedWonder={selectedWonder} mapSelectedWonder={mapSelectedWonder} onWonderSelected={onWonderSelected} />
+            return <New wonders={wonders} selectedWonder={selectedWonder} mapSelectedWonder={mapSelectedWonder} onWonderSelected={onWonderSelected} clearOnMapWonderSelected={clearOnMapWonderSelected} onMapWonderSelected={onMapWonderSelected}/>
           }} />
           <Route exact path="/ancient" render={() => {
             return <Ancient wonders={wonders} selectedWonder={selectedWonder} mapSelectedWonder={mapSelectedWonder} onWonderSelected={onWonderSelected} />

@@ -2,7 +2,7 @@ import './NavBar.css'
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({clearOnMapWonderSelected}) => {
     return (
         <ul>
             <li>
@@ -11,7 +11,7 @@ const NavBar = () => {
                 </Link>
             </li>
             <li>
-                <Link to="/new">
+                <Link to="/new" onClick={clearOnMapWonderSelected}>
                     <button type="button"><span>🕌<br />New</span></button>
                 </Link>
             </li>

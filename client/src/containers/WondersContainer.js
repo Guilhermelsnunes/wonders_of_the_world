@@ -4,7 +4,7 @@ import WonderDetail from '../components/WonderDetail';
 import './WondersContainer.css';
 
 
-const WondersContainer = ({ wonders, selectedWonder, mapSelectedWonder, onWonderSelected }) => {
+const WondersContainer = ({ wonders, selectedWonder, mapSelectedWonder, onWonderSelected, onMapWonderSelected }) => {
 
     const [filteredWonders, setFilteredWonders] = useState([]);
 
@@ -19,17 +19,21 @@ const WondersContainer = ({ wonders, selectedWonder, mapSelectedWonder, onWonder
     const loadFirstWonder = () => {
         if (!selectedWonder && !mapSelectedWonder) {
             const firstWonder = filteredWonders[0];
-            onWonderSelected(firstWonder);
+            onMapWonderSelected(firstWonder);
         } else if (selectedWonder && !mapSelectedWonder) {
             const firstWonder = filteredWonders[0];
-            onWonderSelected(firstWonder)
+            onMapWonderSelected(firstWonder)
         }
-        // else if (!selectedWonder && mapSelectedWonder) {}
+        else if (!selectedWonder && mapSelectedWonder) {
+            onWonderSelected(mapSelectedWonder)
+
+        }
     };
 
     const filterWonders = () => {
         const pathname = window.location.pathname;
         const result = wonders.filter(wonder => wonder.collection === pathname);
+        
         setFilteredWonders(result);
     };
 
@@ -39,8 +43,8 @@ const WondersContainer = ({ wonders, selectedWonder, mapSelectedWonder, onWonder
             <WondersBar wonders={filteredWonders} onWonderSelected={onWonderSelected} />
             </div>
             <div id="wonder-detail">
-            {selectedWonder ? <WonderDetail wonder={selectedWonder} /> : null }
             {mapSelectedWonder ? <WonderDetail wonder={mapSelectedWonder} /> : null }
+            {selectedWonder ? <WonderDetail wonder={selectedWonder} /> : null }            
             </div>
         </div>
     );
