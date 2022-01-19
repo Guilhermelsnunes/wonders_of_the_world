@@ -1,0 +1,11 @@
+.wonder-bar {
+    display: flex;
+    flex-flow: column;
+    width: 200px;
+    margin: auto;
+  }
+
+/* .wonder-detail {
+  display: flex;
+    flex-flow: column;
+} */

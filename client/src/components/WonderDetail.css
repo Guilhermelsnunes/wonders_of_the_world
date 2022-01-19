@@ -1,0 +1,29 @@
+.complete-img {
+    height: 200px;
+    width: 200px;
+    margin-left: 100px;
+    margin-top: 50px;
+    border: rgb(23, 144, 157) solid 3px;
+    border-radius: 10px;
+}
+
+.wonder-detail p {
+    font-size: 20px;
+}
+
+.both-pics {
+    display: flex;
+    margin:auto
+}
+
+.wonder-detail {
+    background-color: rgb(225, 225, 225);
+    width: fit-content;
+    margin: auto;
+    border: rgb(23, 144, 157) solid 3px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

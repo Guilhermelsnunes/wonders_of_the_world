@@ -1,0 +1,124 @@
+.home-page {
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+.home-page-content{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+.home-page-content img{
+    width: 30%;
+    margin: auto;
+}
+
+.home-page-content h1{
+    margin: auto;
+    font-size: 80px;
+    text-align: center;
+    /* min-width: 1200px; */
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.sign-in-button{
+    background-color: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    width: 300px;
+    height: 100px;
+    font-size: 60px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    margin: auto;
+    margin-top: 40px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.sign-in-button:hover {
+    background-color: rgb(199, 218, 218);
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🌍</text></svg>") 16 0,auto;
+}
+
+.sign-in-button span {
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🌍</text></svg>") 16 0,auto;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.sign-in-button span::after {
+    content: '\276F';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.sign-in-button:hover span {
+    padding-right: 35px;
+}
+
+.sign-in-button:hover span::after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+.front-btn {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    min-width: 1300px;
+}
+
+.front-btn a {
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.front-btn a button {
+    background-color: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    width: 100%;
+    font-size: 70px;
+    min-width: 350px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.front-btn a button:hover {
+    background-color: rgb(199, 218, 218);
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🌍</text></svg>") 16 0,auto;
+}
+
+/* BUTTON ANIMATION START*/
+.front-btn a button span {
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🌍</text></svg>") 16 0,auto;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.front-btn a button span::after {
+    content: '\276F';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.front-btn a button:hover span {
+    padding-right: 25px;
+}
+.front-btn a button:hover span::after {
+    opacity: 1;
+    right: 0;
+}
+/* BUTTON ANIMATION END */

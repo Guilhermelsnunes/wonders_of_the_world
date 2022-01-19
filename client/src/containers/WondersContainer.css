@@ -1,0 +1,15 @@
+#wonder-bar {
+  grid-area: wonder-bar;
+}
+
+#wonder-detail {
+  grid-area: wonder-detail;
+}
+
+#main-container {
+    display: grid;
+    grid-template-areas: 
+    'wonder-bar wonder-detail';
+    grid-template-columns: 2fr 7fr;
+  }
+
